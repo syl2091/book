@@ -1,9 +1,9 @@
 package index
 
 import (
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
+	"book/internal/pkg/core"
+	"book/internal/repository/mysql"
+	"book/internal/repository/redis"
 
 	"go.uber.org/zap"
 )

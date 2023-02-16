@@ -1,14 +1,16 @@
 package router
 
 import (
-	"github.com/xinliangnote/go-gin-api/internal/api/admin"
-	"github.com/xinliangnote/go-gin-api/internal/api/authorized"
-	"github.com/xinliangnote/go-gin-api/internal/api/config"
-	"github.com/xinliangnote/go-gin-api/internal/api/cron"
-	"github.com/xinliangnote/go-gin-api/internal/api/helper"
-	"github.com/xinliangnote/go-gin-api/internal/api/menu"
-	"github.com/xinliangnote/go-gin-api/internal/api/tool"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
+	"book/internal/api/admin"
+	"book/internal/api/authorized"
+	"book/internal/api/book"
+	"book/internal/api/config"
+	"book/internal/api/cron"
+	"book/internal/api/helper"
+	"book/internal/api/menu"
+	"book/internal/api/order"
+	"book/internal/api/tool"
+	"book/internal/pkg/core"
 )
 
 func setApiRouter(r *resource) {
@@ -98,6 +100,25 @@ func setApiRouter(r *resource) {
 		api.POST("/cron/:id", core.AliasForRecordMetrics("/api/cron/modify"), cronHandler.Modify())
 		api.PATCH("/cron/used", cronHandler.UpdateUsed())
 		api.PATCH("/cron/exec/:id", core.AliasForRecordMetrics("/api/cron/exec"), cronHandler.Execute())
+
+		orderApi := r.mux.Group("/api/order", core.WrapAuthHandler(r.interceptors.CheckLogin))
+		{
+			orderHandler := order.New(r.logger, r.db, r.cache)
+			orderApi.POST("/create", orderHandler.Create())
+			orderApi.POST("/cancel", orderHandler.Cancel())
+			orderApi.GET("/:id", orderHandler.Detail())
+			orderApi.GET("/list", orderHandler.List())
+		}
+
+		bookApi := r.mux.Group("/api/book", core.WrapAuthHandler(r.interceptors.CheckLogin))
+		{
+			bookHandler := book.New(r.logger, r.db, r.cache)
+			bookApi.POST("/create", bookHandler.Create())
+			bookApi.POST("/delete", bookHandler.Delete())
+			bookApi.GET("/detail", bookHandler.Detail())
+			bookApi.POST("/update", bookHandler.Update())
+			bookApi.GET("/list", bookHandler.List())
+		}
 
 	}
 }

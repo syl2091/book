@@ -8,8 +8,8 @@ import (
 	"runtime"
 	"strings"
 
-	"github.com/xinliangnote/go-gin-api/configs"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
+	"book/configs"
+	"book/internal/pkg/core"
 )
 
 type gormExecuteRequest struct {

@@ -3,10 +3,10 @@ package authorized
 import (
 	"net/http"
 
-	"github.com/xinliangnote/go-gin-api/internal/code"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
+	"book/internal/code"
+	"book/internal/pkg/core"
+	"book/internal/repository/mysql"
+	"book/internal/repository/redis"
 
 	"go.uber.org/zap"
 )

@@ -3,10 +3,10 @@ package admin
 import (
 	"net/http"
 
-	"github.com/xinliangnote/go-gin-api/internal/code"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/password"
-	"github.com/xinliangnote/go-gin-api/internal/services/admin"
+	"book/internal/code"
+	"book/internal/pkg/core"
+	"book/internal/pkg/password"
+	"book/internal/services/admin"
 )
 
 type modifyPasswordRequest struct {

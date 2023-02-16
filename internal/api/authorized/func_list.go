@@ -3,10 +3,10 @@ package authorized
 import (
 	"net/http"
 
-	"github.com/xinliangnote/go-gin-api/internal/code"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/services/authorized"
-	"github.com/xinliangnote/go-gin-api/pkg/timeutil"
+	"book/internal/code"
+	"book/internal/pkg/core"
+	"book/internal/services/authorized"
+	"book/pkg/timeutil"
 
 	"github.com/spf13/cast"
 )

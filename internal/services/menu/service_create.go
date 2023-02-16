@@ -1,8 +1,8 @@
 package menu
 
 import (
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql/menu"
+	"book/internal/pkg/core"
+	"book/internal/repository/mysql/menu"
 )
 
 type CreateMenuData struct {

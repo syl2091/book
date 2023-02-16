@@ -1,12 +1,12 @@
 package menu
 
 import (
-	"github.com/xinliangnote/go-gin-api/configs"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
-	"github.com/xinliangnote/go-gin-api/internal/services/menu"
-	"github.com/xinliangnote/go-gin-api/pkg/hash"
+	"book/configs"
+	"book/internal/pkg/core"
+	"book/internal/repository/mysql"
+	"book/internal/repository/redis"
+	"book/internal/services/menu"
+	"book/pkg/hash"
 
 	"go.uber.org/zap"
 )

@@ -3,12 +3,12 @@ package authorized
 import (
 	"encoding/json"
 
-	"github.com/xinliangnote/go-gin-api/configs"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql/authorized"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql/authorized_api"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
+	"book/configs"
+	"book/internal/pkg/core"
+	"book/internal/repository/mysql"
+	"book/internal/repository/mysql/authorized"
+	"book/internal/repository/mysql/authorized_api"
+	"book/internal/repository/redis"
 )
 
 // CacheAuthorizedData 缓存结构

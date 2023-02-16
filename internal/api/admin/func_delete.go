@@ -1,10 +1,11 @@
 package admin
 
 import (
+	"fmt"
 	"net/http"
 
-	"github.com/xinliangnote/go-gin-api/internal/code"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
+	"book/internal/code"
+	"book/internal/pkg/core"
 )
 
 type deleteRequest struct {
@@ -38,7 +39,7 @@ func (h *handler) Delete() core.HandlerFunc {
 			)
 			return
 		}
-
+		fmt.Printf("======================%d", req.Id)
 		ids, err := h.hashids.HashidsDecode(req.Id)
 		if err != nil {
 			c.AbortWithError(core.Error(

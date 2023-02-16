@@ -60,4 +60,12 @@ var zhCNText = map[int]string{
 	CronListError:    "获取定时任务列表失败",
 	CronDetailError:  "获取定时任务详情失败",
 	CronExecuteError: "手动执行定时任务失败",
+
+	OrderDetailError: "订单详情查询失败",
+	OrderListError:   "订单列表获取失败",
+
+	BookCreateError: "书籍创建失败",
+	BookDetailError: "书籍详情失败",
+	BookUpdateError: "书籍更新失败",
+	BookDeleteError: "书籍更新失败",
 }

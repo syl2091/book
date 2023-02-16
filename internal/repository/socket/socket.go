@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
-	"github.com/xinliangnote/go-gin-api/pkg/errors"
+	"book/internal/repository/mysql"
+	"book/internal/repository/redis"
+	"book/pkg/errors"
 
 	"github.com/gorilla/websocket"
 	"go.uber.org/zap"

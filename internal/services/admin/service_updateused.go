@@ -1,12 +1,12 @@
 package admin
 
 import (
-	"github.com/xinliangnote/go-gin-api/configs"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/password"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql/admin"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
+	"book/configs"
+	"book/internal/pkg/core"
+	"book/internal/pkg/password"
+	"book/internal/repository/mysql"
+	"book/internal/repository/mysql/admin"
+	"book/internal/repository/redis"
 )
 
 func (s *service) UpdateUsed(ctx core.Context, id int32, used int32) (err error) {

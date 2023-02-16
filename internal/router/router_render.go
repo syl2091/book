@@ -1,17 +1,18 @@
 package router
 
 import (
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/render/admin"
-	"github.com/xinliangnote/go-gin-api/internal/render/authorized"
-	"github.com/xinliangnote/go-gin-api/internal/render/config"
-	"github.com/xinliangnote/go-gin-api/internal/render/cron"
-	"github.com/xinliangnote/go-gin-api/internal/render/dashboard"
-	"github.com/xinliangnote/go-gin-api/internal/render/generator"
-	"github.com/xinliangnote/go-gin-api/internal/render/index"
-	"github.com/xinliangnote/go-gin-api/internal/render/install"
-	"github.com/xinliangnote/go-gin-api/internal/render/tool"
-	"github.com/xinliangnote/go-gin-api/internal/render/upgrade"
+	"book/internal/pkg/core"
+	"book/internal/render/admin"
+	"book/internal/render/authorized"
+	"book/internal/render/book"
+	"book/internal/render/config"
+	"book/internal/render/cron"
+	"book/internal/render/dashboard"
+	"book/internal/render/generator"
+	"book/internal/render/index"
+	"book/internal/render/install"
+	"book/internal/render/tool"
+	"book/internal/render/upgrade"
 )
 
 func setRenderRouter(r *resource) {
@@ -26,7 +27,7 @@ func setRenderRouter(r *resource) {
 	renderAdmin := admin.New(r.logger, r.db, r.cache)
 	renderUpgrade := upgrade.New(r.logger, r.db, r.cache)
 	renderCron := cron.New(r.logger, r.db, r.cache)
-
+	renderBook := book.New(r.logger, r.db, r.cache)
 	// 无需记录日志，无需 RBAC 权限验证
 	notRBAC := r.mux.Group("", core.DisableTraceLog, core.DisableRecordMetrics)
 	{
@@ -88,5 +89,10 @@ func setRenderRouter(r *resource) {
 		render.GET("/cron/list", renderCron.List())
 		render.GET("/cron/add", renderCron.Add())
 		render.GET("/cron/edit/:id", renderCron.Edit())
+
+		//图书管理
+		render.GET("/book/list", renderBook.List())
+		render.GET("/book/add", renderBook.Create())
+		render.GET("/book/detail/:id", renderBook.Detail())
 	}
 }

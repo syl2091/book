@@ -1,8 +1,8 @@
 package generator_handler
 
 import (
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
+	"book/internal/repository/mysql"
+	"book/internal/repository/redis"
 
 	"go.uber.org/zap"
 )

@@ -1,11 +1,11 @@
 package authorized
 
 import (
-	"github.com/xinliangnote/go-gin-api/configs"
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql/authorized_api"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
+	"book/configs"
+	"book/internal/pkg/core"
+	"book/internal/repository/mysql"
+	"book/internal/repository/mysql/authorized_api"
+	"book/internal/repository/redis"
 
 	"gorm.io/gorm"
 )

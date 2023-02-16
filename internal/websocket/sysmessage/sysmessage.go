@@ -1,11 +1,11 @@
 package sysmessage
 
 import (
-	"github.com/xinliangnote/go-gin-api/internal/pkg/core"
-	"github.com/xinliangnote/go-gin-api/internal/repository/mysql"
-	"github.com/xinliangnote/go-gin-api/internal/repository/redis"
-	"github.com/xinliangnote/go-gin-api/internal/repository/socket"
-	"github.com/xinliangnote/go-gin-api/pkg/errors"
+	"book/internal/pkg/core"
+	"book/internal/repository/mysql"
+	"book/internal/repository/redis"
+	"book/internal/repository/socket"
+	"book/pkg/errors"
 
 	"go.uber.org/zap"
 )

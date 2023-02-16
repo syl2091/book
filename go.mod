@@ -1,4 +1,4 @@
-module github.com/xinliangnote/go-gin-api
+module book
 
 go 1.16
 

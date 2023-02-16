@@ -3,7 +3,7 @@ package code
 import (
 	_ "embed"
 
-	"github.com/xinliangnote/go-gin-api/configs"
+	"book/configs"
 )
 
 //go:embed code.go
@@ -75,6 +75,15 @@ const (
 	CronListError    = 20403
 	CronDetailError  = 20404
 	CronExecuteError = 20405
+
+	OrderCreateError = 20501
+	OrderDetailError = 20502
+	OrderListError   = 20503
+
+	BookCreateError = 20601
+	BookDeleteError = 20602
+	BookDetailError = 20603
+	BookUpdateError = 20604
 )
 
 func Text(code int) string {
